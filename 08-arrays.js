@@ -19,3 +19,4 @@ while (i < primes.length) {
     console.log(primes[i]);
     i += 1;
 }
+
