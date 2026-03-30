@@ -26,6 +26,7 @@ let contactList = [
 function listContacts(contacts) {
     let i = 0;
     while (i < contacts.length) {
+        console.log("ID:", contactList[i].id);
         console.log(contactList[i].name, contactList[i].email);
         console.log(contactList[i].mobile)
         console.log();
@@ -83,6 +84,21 @@ function main() {
         let choice = parseInt(prompt("Please enter your choice: "));
         if (choice == 1) {
             listContacts(contactList);
+        }
+        if (choice == 2) {
+            let name = prompt("Please enter the name: ");
+            let email = prompt("Please enter the email: ");
+            let mobile = prompt("Please enter the mobile number");
+            addContact(contactList, name, email, mobile);
+        }     
+        if (choice==3) {
+            listContacts(contactList);
+            let id = prompt("Which ID to change? ");
+            let name = prompt("Please enter the name: ");
+            let email = prompt("Please enter the email: ");
+            let mobile = prompt("Please enter the mobile number: ");
+            updateContact(contactList, id, name, email, mobile);
+
         }
         if (choice==5) {
             break;
